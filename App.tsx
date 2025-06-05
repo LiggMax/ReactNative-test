@@ -17,7 +17,7 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
-import {Video} from "react-native-video";
+import {Video} from 'react-native-video';
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -30,9 +30,9 @@ function App(): React.JSX.Element {
       <ScrollView
         style={backgroundStyle}
         contentContainerStyle={styles.scrollContainer}>
-        
+
         <Text style={styles.title}>视频播放器示例</Text>
-        
+
         <Video
           source={{
             uri: 'https://play.xfvod.pro/Z/Z-%E5%92%92%E6%9C%AF%E5%9B%9E%E6%88%98/%E5%89%A7%E5%9C%BA%E7%89%88.mp4'
