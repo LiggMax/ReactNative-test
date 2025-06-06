@@ -5,7 +5,7 @@ import {
   StyleSheet,
 } from 'react-native';
 // import Index from './src/ui/test/alert_Button/index.tsx'
-import SectionListDemo from './src/ui/test/SectionList';
+import Index from './src/ui/test/Image';
 
 function App(): React.JSX.Element {
   return (
@@ -15,7 +15,7 @@ function App(): React.JSX.Element {
         barStyle="dark-content" // 设置状态栏字体为黑色
         backgroundColor="transparent" // 状态栏背景色为透明
       />
-      <SectionListDemo/>
+      <Index/>
     </View>
   );
 }
