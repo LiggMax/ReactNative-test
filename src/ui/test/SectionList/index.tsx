@@ -1,14 +1,71 @@
-
 import React from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+import {
+    StyleSheet,
+    Text,
+    View,
+    SafeAreaView,
+    SectionList,
+    StatusBar,
+} from 'react-native';
 
-export default function index() {
-    return (
-        <View>
-            <Text>
-                Hello World
-            </Text>
-        </View>
-    );
-}
-const styles = StyleSheet.create({});
+const DATA = [
+    {
+        title: 'Main dishes',
+        data: ['Pizza', 'Burger', 'Risotto'],
+    },
+    {
+        title: 'Sides',
+        data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
+    },
+    {
+        title: 'Drinks',
+        data: ['Water', 'Coke', 'Beer'],
+    },
+    {
+        title: 'Desserts',
+        data: ['Cheese Cake', 'Ice Cream'],
+    },
+];
+
+const SectionListDemo = () => (
+    <SafeAreaView style={styles.container}>
+        <SectionList
+            sections={DATA}
+            keyExtractor={(item, index) => item + index}
+            renderItem={({item}) => (
+                <View style={styles.item}>
+                    <Text style={styles.title}>{item}</Text>
+                </View>
+            )}
+            renderSectionHeader={({section: {title}}) => (
+                <Text style={styles.header}>{title}</Text>
+            )}
+        />
+    </SafeAreaView>
+);
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        paddingTop: StatusBar.currentHeight || 0,
+        marginHorizontal: 16,
+        backgroundColor: '#fff',
+    },
+    item: {
+        backgroundColor: '#f9c2ff',
+        padding: 20,
+        marginVertical: 8,
+        borderRadius: 8,
+    },
+    header: {
+        fontSize: 32,
+        backgroundColor: '#fff',
+        fontWeight: 'bold',
+        paddingVertical: 10,
+    },
+    title: {
+        fontSize: 24,
+    },
+});
+
+export default SectionListDemo;
