@@ -30,6 +30,8 @@ const DATA = [
 const SectionListDemo = () => (
     <SafeAreaView style={styles.container}>
         <SectionList
+            //隐藏滚动条
+            showsVerticalScrollIndicator={false}
             sections={DATA}
             keyExtractor={(item, index) => item + index}
             renderItem={({item}) => (
