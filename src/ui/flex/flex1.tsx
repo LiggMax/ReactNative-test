@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-export default class index extends Component<{}, {}> {
+export default class flex1 extends Component<{}, {}> {
   render() {
     return (
       <View>
@@ -16,23 +16,23 @@ export default class index extends Component<{}, {}> {
 
         <Text style={[styles.title]}>反转布局</Text>
         <View style={[styles.flexColumnReverse]}>
-          <Text style={[styles.test]}>vue</Text>
-          <Text style={[styles.test]}>React</Text>
-          <Text style={[styles.test]}>React Native</Text>
+          <Text style={[styles.text]}>1.vue</Text>
+          <Text style={[styles.text]}>2.React</Text>
+          <Text style={[styles.text]}>3.React Native</Text>
         </View>
 
         <Text style={[styles.title]}>横向布局</Text>
         <View style={[styles.flexRow]}>
-          <Text style={[styles.test]}>vue </Text>
-          <Text style={[styles.test]}>React </Text>
-          <Text style={[styles.test]}>React Native</Text>
+          <Text style={[styles.text]}>1.vue </Text>
+          <Text style={[styles.text]}>2.React </Text>
+          <Text style={[styles.text]}>3.React Native </Text>
         </View>
 
         <Text style={[styles.title]}>横向右对齐布局</Text>
         <View style={[styles.flexRowReverse]}>
-          <Text style={[styles.test]}>vue </Text>
-          <Text style={[styles.test]}>React </Text>
-          <Text style={[styles.test]}>React Native</Text>
+          <Text style={[styles.text]}>1.vue </Text>
+          <Text style={[styles.text]}>2.React </Text>
+          <Text style={[styles.text]}>3.React Native </Text>
         </View>
       </View>
     );
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     color: '#42fcf2',
     fontWeight: 'bold',
   },
-  test: {
+  text: {
     textAlign: 'center',
     fontSize: 30,
   },
@@ -71,5 +71,6 @@ const styles = StyleSheet.create({
   flexRowReverse: {
     flexDirection: 'row-reverse',
     borderColor: '#00ff38',
+    borderWidth:2
   },
 });
