@@ -5,7 +5,7 @@ import {
   StyleSheet,
 } from 'react-native';
 // import Index from './src/ui/test/alert_Button/index.tsx'
-import Index from './src/ui/test/Image';
+import Index from './src/ui/test/SectionList';
 
 function App(): React.JSX.Element {
   return (
