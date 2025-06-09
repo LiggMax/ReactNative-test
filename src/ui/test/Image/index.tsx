@@ -3,9 +3,9 @@ import {Text, StyleSheet, View, Image, Dimensions, ScrollView, SafeAreaView, Sta
 
 export default function index() {
     return (
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView >
             <View style={styles.title}>
-                <Text>推荐</Text>
+                <Text style={{fontSize: 23, fontWeight: 'bold'}}>排行</Text>
                 <ScrollView
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
@@ -45,10 +45,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-    },
-    safeArea: {
-        // 添加安全距离样式
-        paddingTop: StatusBar.currentHeight
     },
     title:{
         margin: 10,

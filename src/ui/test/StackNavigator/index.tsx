@@ -1,6 +1,5 @@
 import React from 'react';
 import {Text, StyleSheet, View, Button, TouchableOpacity, Alert} from 'react-native';
-import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 function HomeScreen(props: {navigation: {navigate: (arg0: string) => void}}) {
