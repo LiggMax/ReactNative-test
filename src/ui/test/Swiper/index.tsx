@@ -51,7 +51,6 @@ export default class SwiperComponent extends Component {
             prevButton={<Text style={styles.buttonText}>‹</Text>}
             loop={true}
             index={0}
-            onIndexChanged={(index) => console.log('轮播到第', index + 1, '张图片')}
           >
             {swiperData.map((item) => (
               <View key={item.id} style={styles.slide}>
@@ -105,6 +104,7 @@ export default class SwiperComponent extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    margin:  20,
     backgroundColor: '#f5f5f5',
     paddingTop: 20,
   },

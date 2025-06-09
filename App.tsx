@@ -4,19 +4,20 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
-// import SectionListDemo from './src/ui/test/SectionList';
-import SwiperComponent from './src/ui/test/Swiper';
+import Index from './src/ui/test/StackNavigator';
+import {NavigationContainer} from '@react-navigation/native';
+
 
 function App(): React.JSX.Element {
   return (
-    <View style={styles.container}>
-      <StatusBar
-        translucent={true} // 设置状态栏透明
-        barStyle="dark-content" // 设置状态栏字体为黑色
-        backgroundColor="transparent" // 状态栏背景色为透明
-      />
-      <SwiperComponent/>
-    </View>
+      <NavigationContainer>
+          <StatusBar
+            translucent={true} // 设置状态栏透明
+            barStyle="dark-content" // 设置状态栏字体为黑色
+            backgroundColor="transparent" // 状态栏背景色为透明
+          />
+          <Index/>
+      </NavigationContainer>
   );
 }
 

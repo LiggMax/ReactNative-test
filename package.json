@@ -11,11 +11,15 @@
     "windows": "npx @react-native-community/cli run-windows"
   },
   "dependencies": {
+    "@react-navigation/native": "^7.1.10",
+    "@react-navigation/native-stack": "^7.3.14",
     "@rneui/base": "^4.0.0-rc.8",
     "@rneui/themed": "^4.0.0-rc.8",
     "axios": "^1.9.0",
     "react": "19.0.0",
     "react-native": "^0.78.0",
+    "react-native-safe-area-context": "^5.4.1",
+    "react-native-screens": "^4.11.1",
     "react-native-swiper": "^1.6.0",
     "react-native-video": "^6.14.1",
     "react-native-windows": "^0.78.8"
