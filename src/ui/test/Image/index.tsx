@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, StyleSheet, View, Image, Dimensions, ScrollView, SafeAreaView, StatusBar} from 'react-native';
+import {Text, StyleSheet, View, Image, Dimensions, ScrollView, SafeAreaView} from 'react-native';
 
 export default function index() {
     return (

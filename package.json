@@ -22,6 +22,7 @@
     "react-native-safe-area-context": "^5.4.1",
     "react-native-screens": "^4.11.1",
     "react-native-swiper": "^1.6.0",
+    "react-native-vector-icons": "^10.2.0",
     "react-native-video": "^6.14.1",
     "react-native-windows": "^0.78.8"
   },
