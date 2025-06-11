@@ -34,6 +34,7 @@ local.properties
 *.keystore
 !debug.keystore
 .kotlin/
+.android/app/release/
 
 # node.js
 #
@@ -73,4 +74,4 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-/android/app/release/
+
