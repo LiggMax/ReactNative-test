@@ -1,13 +1,19 @@
 import React from 'react';
-import {Text, StyleSheet, View, StatusBar} from 'react-native';
+import {Text, StyleSheet, View, StatusBar, SafeAreaView} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Home from './test/material-top-tabs/index.tsx'
+import Image from './test/Image/index.tsx'
+import User from './test/Icon/VectorIconsDemo.tsx'
+
 
 function HomeScreen() {
   return (
-    <View>
-      <Text>Home Screen</Text>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        <Home/>
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -16,23 +22,29 @@ function HomeScreen() {
  */
 function FavoriteScreen() {
   return (
-    <View>
-      <Text>Favorite Screen</Text>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        <Image/>
+      </View>
+    </SafeAreaView>
   );
 }
 
-const Tab = createBottomTabNavigator()
 /**
  * 用户页面
  */
 function UserScreen() {
   return (
-    <View>
-      <Text>User Screen</Text>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        <User/>
+      </View>
+    </SafeAreaView>
   );
 }
+
+const Tab = createBottomTabNavigator()
+
 export default function index() {
   return (
 
@@ -40,6 +52,7 @@ export default function index() {
 
       <Tab.Screen
        options={ {
+         headerShown: false,
          title: '首页',
          tabBarIcon:({color,size}) =>(
            <Icon name="home-outline" color={color} size={size}/>
@@ -73,4 +86,12 @@ export default function index() {
     </Tab.Navigator>
   );
 }
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  container: {
+    flex: 1,
+  },
+});

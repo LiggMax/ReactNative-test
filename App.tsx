@@ -4,7 +4,7 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
-import Index from './src/ui/layout/layout.tsx';
+import Index from './src/ui/layout.tsx';
 import {NavigationContainer} from '@react-navigation/native';
 
 

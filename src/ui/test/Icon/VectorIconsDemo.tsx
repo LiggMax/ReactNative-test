@@ -27,7 +27,7 @@ const VectorIconsDemo = () => {
           <Icon name="camera" size={30} color="#4ECDC4" />
         </View>
       </View>
-      Material Icons
+      {/* Material Icons */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Material Icons</Text>
         <View style={styles.iconRow}>
