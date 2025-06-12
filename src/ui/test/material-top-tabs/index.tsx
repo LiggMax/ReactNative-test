@@ -42,6 +42,12 @@ export default function index() {
   return (
     <SafeAreaView style={{flex: 1}}>
       <MTab.Navigator
+        screenOptions={{
+          tabBarLabelStyle:{
+            fontSize: 20,
+            fontWeight: 'bold'
+          }
+        }}
       >
         <MTab.Screen
           name="推荐"
