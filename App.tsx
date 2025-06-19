@@ -6,11 +6,20 @@
  */
 
 import React from 'react';
+import {StatusBar, useColorScheme} from 'react-native';
 import BottomTabLayout from './src/layout';
 
 function App(): React.JSX.Element {
+  const isDarkMode = useColorScheme() === 'dark';
+
   return (
-    <BottomTabLayout />
+    <>
+      <StatusBar
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        translucent={true}
+      />
+      <BottomTabLayout />
+    </>
   );
 }
 

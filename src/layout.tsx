@@ -36,16 +36,7 @@ const Tab = createBottomTabNavigator();
 export default function BottomTabLayout() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={{
-          tabBarInactiveTintColor: 'gray',
-          tabBarStyle: {
-            backgroundColor: 'white',
-            paddingBottom: 5,
-            height: 60,
-          },
-          headerTintColor: 'white',
-        }}>
+      <Tab.Navigator>
         <Tab.Screen
           name="Home"
           component={HomeScreen}
