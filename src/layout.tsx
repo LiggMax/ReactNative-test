@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 // 定义屏幕组件
 function HomeScreen() {
@@ -36,13 +37,30 @@ const Tab = createBottomTabNavigator();
 export default function BottomTabLayout() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarActiveTintColor: '#e91e63',
+          tabBarInactiveTintColor: 'gray',
+          tabBarStyle: {
+            backgroundColor: 'white',
+            paddingBottom: 5,
+            height: 60,
+          },
+          headerStyle: {
+            backgroundColor: '#e91e63',
+          },
+          headerTintColor: 'white',
+        }}>
         <Tab.Screen
           name="Home"
           component={HomeScreen}
           options={{
             title: '首页',
             tabBarLabel: '首页',
+            // eslint-disable-next-line react/no-unstable-nested-components
+            tabBarIcon: ({color, size}) => (
+              <Icon name="Home" color={color} size={size} />
+            ),
           }}
         />
         <Tab.Screen
@@ -51,6 +69,10 @@ export default function BottomTabLayout() {
           options={{
             title: '探索',
             tabBarLabel: '探索',
+            // eslint-disable-next-line react/no-unstable-nested-components
+            tabBarIcon: ({color, size}) => (
+              <Icon name="search" color={color} size={size} />
+            ),
           }}
         />
         <Tab.Screen
@@ -59,6 +81,10 @@ export default function BottomTabLayout() {
           options={{
             title: '个人资料',
             tabBarLabel: '我的',
+            // eslint-disable-next-line react/no-unstable-nested-components
+            tabBarIcon: ({color, size}) => (
+              <Icon name="person" color={color} size={size} />
+            ),
           }}
         />
       </Tab.Navigator>
