@@ -41,12 +41,13 @@ export default function BottomTabLayout() {
         screenOptions={{
           tabBarInactiveTintColor: 'gray',
           tabBarStyle: {
-            backgroundColor: 'white',
-            paddingBottom: 5,
-            height: 60,
+            // backgroundColor: 'white',
+            // paddingBottom: 5,
+            // height: 60,
           },
-          headerTintColor: 'white',
-        }}>
+          // headerTintColor: 'white',
+        }}
+      >
         <Tab.Screen
           name="Home"
           component={HomeScreen}
