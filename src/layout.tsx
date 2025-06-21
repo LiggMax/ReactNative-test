@@ -14,7 +14,7 @@ function HomeScreen() {
   );
 }
 
-function ExploreScreen() {
+function collectionScreen() {
   return (
     <View style={styles.screenContainer}>
       <Text style={styles.screenTitle}>探索</Text>
@@ -39,15 +39,11 @@ export default function BottomTabLayout() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
-          tabBarActiveTintColor: '#e91e63',
           tabBarInactiveTintColor: 'gray',
           tabBarStyle: {
             backgroundColor: 'white',
             paddingBottom: 5,
             height: 60,
-          },
-          headerStyle: {
-            backgroundColor: '#e91e63',
           },
           headerTintColor: 'white',
         }}>
@@ -55,23 +51,29 @@ export default function BottomTabLayout() {
           name="Home"
           component={HomeScreen}
           options={{
-            title: '首页',
             tabBarLabel: '首页',
             // eslint-disable-next-line react/no-unstable-nested-components
-            tabBarIcon: ({color, size}) => (
-              <Icon name="Home" color={color} size={size} />
+            tabBarIcon: ({color, size, focused}) => (
+              <Icon
+                name={focused ? 'home' : 'home-outline'}
+                color={color}
+                size={size}
+              />
             ),
           }}
         />
         <Tab.Screen
           name="Explore"
-          component={ExploreScreen}
+          component={collectionScreen}
           options={{
-            title: '探索',
-            tabBarLabel: '探索',
+            tabBarLabel: '收藏',
             // eslint-disable-next-line react/no-unstable-nested-components
-            tabBarIcon: ({color, size}) => (
-              <Icon name="search" color={color} size={size} />
+            tabBarIcon: ({color, size, focused}) => (
+              <Icon
+                name={focused ? 'heart' : 'heart-outline'}
+                color={color}
+                size={size}
+              />
             ),
           }}
         />
@@ -79,11 +81,14 @@ export default function BottomTabLayout() {
           name="Profile"
           component={ProfileScreen}
           options={{
-            title: '个人资料',
             tabBarLabel: '我的',
             // eslint-disable-next-line react/no-unstable-nested-components
-            tabBarIcon: ({color, size}) => (
-              <Icon name="person" color={color} size={size} />
+            tabBarIcon: ({color, size, focused}) => (
+              <Icon
+                name={focused ? 'person' : 'person-outline'}
+                color={color}
+                size={size}
+              />
             ),
           }}
         />
